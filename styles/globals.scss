@@ -1,4 +1,9 @@
+@import "tailwindcss/tailwind.css";
 body {
   @apply bg-gray-50    dark:bg-dark;
   @apply text-gray-900 dark:text-gray-50;
+}
+
+.login-input {
+  @apply w-full mt-6 h-14 text-xl pt-3;
 }

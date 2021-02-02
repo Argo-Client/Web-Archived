@@ -15,6 +15,7 @@ import {
   faSun,
   faChevronLeft,
   faMoon,
+  faAtlas,
 } from "@fortawesome/free-solid-svg-icons";
 
 const Home = () => {
@@ -25,7 +26,7 @@ const Home = () => {
         <NavbarItem href="/" icon={faHome}>
           Home
         </NavbarItem>
-        <NavbarItem icon={faCalendarWeek} href="/">
+        <NavbarItem icon={faCalendarWeek} href="/agenda">
           Agenda
         </NavbarItem>
         <NavbarItem icon={faCheckCircle} href="/afwezigheid">
@@ -46,7 +47,10 @@ const Home = () => {
         <NavbarItem icon={faStar} href="/activiteiten">
           Activiteiten
         </NavbarItem>
-        <div className="absolute bottom-4 left-0 pl-4">
+        <NavbarItem icon={faAtlas} href="/leermiddelen">
+          Leermiddelen
+        </NavbarItem>
+        <div className="absolute bottom-4 left-0 pl-6">
           <NavbarButton
             icon={faEnvelope}
             action={() => alert("placeholder")}

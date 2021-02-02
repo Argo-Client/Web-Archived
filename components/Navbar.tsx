@@ -17,8 +17,8 @@ export function Navbar({
 }) {
   return (
     <>
-      <ul className="bg-gray-100 inline-block dark:bg-dark-secondary py-4 w-64 min-h-screen">
-        <div className="ml-8">
+      <ul className="bg-gray-100 inline-block dark:bg-dark-secondary py-4 w-72 min-h-screen">
+        <div className="ml-6">
           <Image
             src={icon}
             alt=""
@@ -48,10 +48,10 @@ export function NavbarItem({
 }) {
   return (
     <Link href={href}>
-      <li className="dark:text-white cursor-pointer text-gray-600 hover:bg-gray-200 py-2 m-2 pl-8 text-2xl rounded-md dark:hover:bg-dark-tertiary dark:hover:text-gray-200">
-        <div className="w-6 mr-4 inline-block">
+      <li className="dark:text-white cursor-pointer text-gray-600 hover:bg-gray-200 py-2 m-2 pl-6 text-2xl rounded-md dark:hover:bg-dark-tertiary dark:hover:text-gray-200">
+        <button className="w-12 h-12 mr-4 inline-block bg-gray-200 dark:bg-dark-tertiary rounded-full shadow-md">
           <FontAwesomeIcon icon={icon} />
-        </div>
+        </button>
         <span className="text-gray-700 dark:text-gray-200">{children}</span>
       </li>
     </Link>
@@ -69,10 +69,10 @@ export function NavbarButton(
 ) {
   return (
     <button
-      className="focus:outline-none p-1 w-12 mr-2 h-12 bg-gray-200 dark:bg-dark-tertiary rounded-full shadow-md"
+      className="focus:outline-none p-1 w-12 mr-3 h-12 bg-gray-200 dark:bg-dark-tertiary rounded-full shadow-md"
       onClick={action}
     >
-      <FontAwesomeIcon icon={icon}></FontAwesomeIcon>
+      <FontAwesomeIcon icon={icon} />
     </button>
   );
 }
