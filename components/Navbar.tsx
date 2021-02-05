@@ -1,78 +1,88 @@
 import Link from "next/link";
-import Image from "next/image";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import { IconType } from "react-icons";
+import { HTMLAttributes } from "react";
 
 /**
  * @component
  * @param NavbarItem
  */
-export function Navbar({
-  children,
-  icon,
-}: {
-  children: JSX.Element[];
-  icon: string;
-}) {
-  return (
-    <>
-      <ul className="bg-gray-100 inline-block dark:bg-dark-secondary py-4 w-72 min-h-screen">
-        <div className="ml-6">
-          <Image
-            src={icon}
-            alt=""
-            width={64}
-            height={64}
-            className="bg-blue-500 rounded-full shadow-md"
-          />
-        </div>
 
-        {children}
-      </ul>
-    </>
-  );
+export function Navbar({
+	children,
+	Icon,
+}: {
+	children: JSX.Element[];
+	Icon: IconType;
+}) {
+	return (
+		<nav className="bg-gray-100 dark:bg-dark-secondary py-4 min-h-screen w-max relative flex-col ">
+			<div className="min-w-max ml-6">
+				<div className="bg-blue-500 rounded-full shadow-md inline-block">
+					<Icon className="w-16 h-16 m2 p-2.5 text-white" />
+				</div>
+			</div>
+			{children}
+		</nav>
+	);
 }
 
 /**
  * A navbar item
  */
+interface IconButton extends HTMLAttributes<HTMLButtonElement> {
+	Icon: IconType;
+	small?: boolean;
+}
 export function NavbarItem({
-  children,
-  href,
-  icon,
+	children,
+	href,
+	Icon,
 }: {
-  children: any;
-  href: string;
-  icon: IconProp;
+	children: any;
+	href: string;
+	Icon: IconType;
 }) {
-  return (
-    <Link href={href}>
-      <li className="dark:text-white cursor-pointer text-gray-600 hover:bg-gray-200 py-2 m-2 pl-6 text-2xl rounded-md dark:hover:bg-dark-tertiary dark:hover:text-gray-200">
-        <button className="w-12 h-12 mr-4 inline-block bg-gray-200 dark:bg-dark-tertiary rounded-full shadow-md">
-          <FontAwesomeIcon icon={icon} />
-        </button>
-        <span className="text-gray-700 dark:text-gray-200">{children}</span>
-      </li>
-    </Link>
-  );
+	return (
+		<Link href={href}>
+			<a>
+				<div className="px-6 py-2 m-2 rounded-md text-gray-600 dark:text-white hover:bg-gray-200 dark:hover:bg-dark-tertiary">
+					<div className="text-2xl">
+						<IconButton Icon={Icon} />
+						<span className="text-gray-700 dark:text-gray-200">
+							{children}
+						</span>
+					</div>
+				</div>
+			</a>
+		</Link>
+	);
 }
 
+interface IconButton extends HTMLAttributes<HTMLButtonElement> {
+	Icon: IconType;
+	small?: boolean;
+	className?: string;
+}
 /**
  * Create a small button with an icon
- * @param Icon
- * @param href
  */
-export function NavbarButton(
-  { icon, action },
-  { icon: IconProp, action: Function }
-) {
-  return (
-    <button
-      className="focus:outline-none p-1 w-12 mr-3 h-12 bg-gray-200 dark:bg-dark-tertiary rounded-full shadow-md"
-      onClick={action}
-    >
-      <FontAwesomeIcon icon={icon} />
-    </button>
-  );
+export function IconButton({
+	Icon,
+	small,
+	className = "",
+	...props
+}: IconButton) {
+	return (
+		<button
+			className={`mr-3 focus:outline-none bg-gray-200 dark:bg-dark-tertiary rounded-full shadow-md ${className}`}
+			{...props}
+		>
+			<Icon
+				className={`${
+					small ? "w-10 h-10 p-3" : "w-11 h-11 p-2.5"
+				} inline-block`}
+			/>
+		</button>
+	);
 }
