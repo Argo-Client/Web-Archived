@@ -1,23 +1,5 @@
-import { Navbar, NavbarItem, IconButton } from "../components/Navbar";
-import Button from "../components/Button";
-import { useTheme } from "next-themes";
-import {
-	FaHome,
-	FaCalendarWeek,
-	FaCheckCircle,
-	FaSortNumericUpAlt,
-	FaFolder,
-	FaMapSigns,
-	FaFileAlt,
-	FaStar,
-	FaAtlas,
-	FaCog,
-	FaEnvelope,
-	FaSun,
-	FaChevronLeft,
-	FaMoon,
-} from "react-icons/fa";
-import { MdSchool } from "react-icons/md";
+import Nav from "../components/Nav";
+import { LesUur } from "../components/Items";
 
 const Home = () => {
 	const { setTheme } = useTheme();

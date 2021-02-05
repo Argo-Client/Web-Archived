@@ -1,7 +1,4 @@
-import Container from "../components/Container";
-import Button from "../components/Button";
-import Card from "../components/Card";
-import Input from "../components/Input";
+import { LoginInput } from "../components/Input";
 import Image from "next/image";
 import { useTheme } from "next-themes";
 import Particles from "react-tsparticles";
@@ -75,8 +72,8 @@ const Background = () => {
 const Login = () => (
   <>
     <Background />
-    <Container className="flex justify-center items-center h-screen">
-      <Card className="md:w-1/3 w-10/12 min-w-min inline-block mx-auto p-8 relative z-10">
+    <div className="flex justify-center items-center h-screen container-self">
+      <div className="md:w-1/3 w-10/12 mx-auto p-8 z-10 card">
         <div className="flex justify-center">
           <Image
             src="/logo.png"
@@ -87,30 +84,17 @@ const Login = () => (
         </div>
 
         <form action="" method="POST">
-          <Input
-            icon={faSchool}
-            placeholder="School"
-            className="login-input"
-            type="text"
+          <LoginInput icon={faSchool} placeholder="School" type="text" />
+          <LoginInput icon={faUser} placeholder="Gebruikersnaam" type="text" />
+          <LoginInput icon={faLock} placeholder="Wachtwoord" type="password" />
+          <input
+            className="float-right mt-5 mr-1 h-12 text-lg btn"
+            type="submit"
+            value="Inloggen"
           />
-          <Input
-            icon={faUser}
-            placeholder="Gebruikersnaam"
-            className="login-input"
-            type="text"
-          />
-          <Input
-            icon={faLock}
-            placeholder="Wachtwoord"
-            className="login-input"
-            type="password"
-          />
-          <Button className="float-right mt-5 mr-1 h-12 w-16 text-lg">
-            Login
-          </Button>
         </form>
-      </Card>
-    </Container>
+      </div>
+    </div>
   </>
 );
 
