@@ -1,4 +1,10 @@
 {
     "css.lint.unknownAtRules": "ignore",
     "scss.validate": false,
+    "prettier.arrowParens": "avoid",
+    "prettier.tabWidth": 4,
+    "prettier.useTabs": true,
+    "prettier.proseWrap": "never",
+    "prettier.printWidth": 9999,
+    "prettier.quoteProps": "consistent",
 }

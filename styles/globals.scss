@@ -1,32 +1,28 @@
 body {
-  @apply bg-gray-50    dark:bg-dark;
-  @apply text-gray-900 dark:text-gray-50;
+	@apply bg-gray-50    dark:bg-dark;
+	@apply text-gray-900 dark:text-gray-50;
 }
 
 .login-input {
-  @apply w-full mt-6 h-14 text-xl pt-3;
-  @apply bg-light dark:bg-dark;
-  @apply text-gray-900 dark:text-gray-50;
+	@apply w-full mt-6 h-14 text-xl pt-3;
+	@apply bg-light dark:bg-dark;
+	@apply text-gray-900 dark:text-gray-50;
 }
 
 .btn {
-  @apply cursor-pointer rounded-md shadow-lg p-2 focus:outline-none text-white;
-  @apply hover:bg-blue-600 focus:ring-blue-600 focus:ring-2 focus:ring-opacity-50 bg-blue-500;
+	@apply cursor-pointer rounded-md shadow-lg p-2 focus:outline-none text-white;
+	@apply hover:bg-blue-600 focus:ring-blue-600 focus:ring-2 focus:ring-opacity-50 bg-blue-500;
 }
 
 .input {
-  @apply dark:bg-dark-tertiary bg-light-tertiary;
-  @apply relative shadow-md border-transparent focus:outline-none focus:border-transparent rounded-md;
-}
-
-.container-self {
-  @apply md:container md:mx-auto;
+	@apply dark:bg-dark-tertiary bg-light-tertiary;
+	@apply relative shadow-md border-transparent focus:outline-none focus:border-transparent rounded-md;
 }
 
 .card {
-  @apply dark:bg-dark-secondary bg-light-secondary rounded-lg shadow-lg p-4;
+	@apply dark:bg-dark-secondary bg-light-secondary rounded-lg shadow-lg;
 }
 
 .item {
-  @apply dark:bg-dark-tertiary bg-light-tertiary rounded-md p-4;
+	@apply dark:bg-dark-tertiary bg-light-tertiary rounded-md p-4;
 }
