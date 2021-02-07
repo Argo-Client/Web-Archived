@@ -10,7 +10,7 @@ const Login = () => (
 		<div className="flex justify-center items-center h-screen">
 			<div className="p-6 z-0 card">
 				<div className="flex justify-center mt-4 mb-8">
-					<ArgoLogo size={32} />
+					<ArgoLogo large />
 				</div>
 
 				<form action="" method="POST">

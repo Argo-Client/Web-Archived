@@ -7,7 +7,7 @@ import ArgoLogo from "./Argo";
 export function Navbar({ children }: { children: JSX.Element[] }) {
 	return (
 		<nav className="bg-gray-100 dark:bg-dark-secondary py-4 min-h-screen inline-block w-max relative flex-col ">
-			<div className="min-w-max ml-6">
+			<div className="ml-6">
 				<ArgoLogo />
 			</div>
 			{children}
