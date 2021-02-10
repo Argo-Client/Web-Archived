@@ -4,6 +4,9 @@
     "paths": {
       "@components/*": [
         "components/*"
+      ],
+      "@magister/*": [
+        "magister/*"
       ]
     },
     "target": "es5",
