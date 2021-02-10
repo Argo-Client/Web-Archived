@@ -27,3 +27,7 @@ body {
 	@apply dark:bg-dark-tertiary bg-light-tertiary rounded-md p-4;
 	@apply transition hover:shadow-lg duration-200 cursor-pointer;
 }
+
+.not-found {
+	font-size: 15rem;
+}
