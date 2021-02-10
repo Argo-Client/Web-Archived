@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-const Page = ({ title, description, children }: { title: string; description: string; children: JSX.Element }) => (
+const Page = ({ title, description, children }: { title: string; description: string; children: JSX.Element[] | JSX.Element }) => (
 	<>
 		<Head>
 			<title>{title}</title>

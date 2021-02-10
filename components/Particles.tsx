@@ -6,7 +6,7 @@ const ParticleBG = ({ className = "" }: { className?: string }) => {
 
 	return (
 		<Particles
-			className={`absolute inset-0 ${className}`}
+			className={`inset-0 ${className}`}
 			options={{
 				fpsLimit: 60,
 				interactivity: {
