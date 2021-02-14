@@ -10,7 +10,6 @@
   "dependencies": {
     "autoprefixer": "^10.2.4",
     "cryptr": "^6.0.2",
-    "htmlparser": "^1.7.7",
     "magister-openid": "github:netfloex/magister-openid",
     "next": "10.0.6",
     "next-themes": "0.0.10",

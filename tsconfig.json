@@ -3,10 +3,10 @@
     "baseUrl": ".",
     "paths": {
       "@components/*": [
-        "components/*"
+        "src/components/*"
       ],
       "@magister/*": [
-        "magister/*"
+        "src/magister/*"
       ]
     },
     "target": "es5",

@@ -1,6 +1,6 @@
 import Nav from "@components/Nav";
 import Page from "@components/Page";
-import { LesUur } from "../components/Items";
+import { LesUur } from "@components/Items";
 
 const Home = () => {
 	const times = ["nacht", "morgen", "middag", "navond"];
