@@ -17,7 +17,7 @@ const authCodeFromUrl = async (url: string) => {
 	var res = await fetch(url);
 	if (res.status === 200) {
 		var js = await res.text();
-		var tokens: string[] = JSON.parse(js.match(/\["[\d\w]*","[\d\w]*","[\d\w]*","[\d\w]*"\]/)[0]);
+		var tokens: string[] = JSON.parse(js.match(/\["[\d\w]*","[\d\w]*","[\d\w]*","[\d\w]*"\]/gm).reverse()[0]);
 		var which: string[] = JSON.parse(js.match(/\["\d","\d"\]/));
 		return which.map(g => tokens[parseInt(g)]).join("");
 	}
